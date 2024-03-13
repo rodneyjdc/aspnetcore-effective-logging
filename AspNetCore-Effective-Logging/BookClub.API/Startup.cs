@@ -39,7 +39,7 @@ namespace BookClub.API
                 new SqlConnection(Configuration.GetConnectionString("BookClubDb")));
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IBookLogic, BookLogic>();
-            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerConfig>();
+            //services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerConfig>();
 
             services.AddAuthentication("Bearer")
                 .AddJwtBearer(options =>
